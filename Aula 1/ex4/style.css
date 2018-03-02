@@ -1,52 +1,67 @@
 ﻿body {
-    height:100%;
+    /*height:100%;*/
+    width: 90%;
+    margin: -20px auto 0px auto;
+    background-color: gray;
  }
 
 .icon {
     position: absolute;
-    top: 20px;
-    left: 170px;
+    top: 50px;
+    left: 450px;
 }
 
 .navMenu {
     font-size: 15pt;
-    margin-bottom: 20px;
+    padding-bottom: 50px;
+    padding-top: 20px;
 }
 
 .header {
-    margin-bottom: 10px;
+    padding-top: 20px;
+    font-size: 20pt;
+    font-family: fantasy;
 }
 
 .aside {
     display: block;
-    width: 301px;
+    width: 170px;
     float: left;
-    border-top:solid;
-    border-width: 2px;
+    /*border:solid;*/
     padding-left: 10px;
-    padding-top: 10px;
+}
+
+.aside h2 {
+    text-align: center;
+}
+
+.aside strong {
+    font-weight: normal;
 }
 
 .section {
     display: block;
-    width:1000px;
+    width:770px;
     float: right;
     border-left: solid;
     border-width: 2px;
-    padding-left: 20px;
-    border-top:solid;
-    border-width: 2px;
+    padding-left: 50px;
+}
+
+.section h2 {
+    text-align: center;
 }
 
 .footer {
-    border-top: solid;
+    /*border: solid;*/
     /*position: fixed;*/
-    bottom:0;
+    /*bottom:0;*/
     width:100%;
     /*height:100px; */  /* Height of the footer */
-    background-color: gray;
     clear: both;
-    border-width: 2px;
+    /*border-width: 2px;*/
+    padding-top: 10px;
+    text-align: right;
 }
 
 a:link {
@@ -68,7 +83,18 @@ a:active {
 }
 
 .button {
-    background-color: rgb(201, 201, 201);
+    background-color: rgb(245, 245, 245);
     padding: 10px;
     font-weight: bold;
+}
+
+#corpo {
+    background-color: rgb(220, 220, 220);
+    padding-right: 100px;
+    padding-left: 100px;
+}
+
+.article {
+    border-bottom: solid;
+    border-width: 1px;
 }
