@@ -3,6 +3,8 @@
     width: 90%;
     margin: -20px auto 0px auto;
     background-color: gray;
+    margin-top: 10px;
+    margin-bottom: 10px;
  }
 
 .icon {
@@ -92,6 +94,9 @@ a:active {
     background-color: rgb(220, 220, 220);
     padding-right: 100px;
     padding-left: 100px;
+    border: solid;
+    border-width: 1px;
+    border-color: green;
 }
 
 .article {
