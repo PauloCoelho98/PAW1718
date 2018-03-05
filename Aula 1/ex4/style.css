@@ -7,12 +7,6 @@
     margin-bottom: 10px;
  }
 
-.icon {
-    position: absolute;
-    top: 80px;
-    left: 450px;
-}
-
 .navMenu {
     font-size: 15pt;
     padding-bottom: 50px;
@@ -23,6 +17,9 @@
     padding-top: 20px;
     font-size: 20pt;
     font-family: fantasy;
+    display: inline-block;
+    height: 150px;
+  width: 1000px;
 }
 
 .aside {
@@ -102,4 +99,8 @@ a:active {
 .article {
     border-bottom: solid;
     border-width: 1px;
+}
+
+.herderElements {
+    display: inline-block;
 }
