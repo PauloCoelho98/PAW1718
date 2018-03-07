@@ -1,0 +1,145 @@
+﻿body {
+    background-color: rgb(172, 172, 172);
+    border: solid;
+    border-width: 1px;
+    border-color: green;
+ }
+
+.navMenu {
+    grid-area: nav;
+    /*background-color: rgb(199, 226, 43);*/
+    padding: 10px;
+    align-content: center;
+}
+
+.header {
+    grid-area: header;
+    /*background-color: rgb(37, 155, 145);*/
+    padding-left: 10px;
+    padding-top: 20px;
+    font-size: 20pt;
+    font-family: fantasy;
+    display: inline-block;
+}
+
+.aside {
+    grid-area: left;
+    /*background-color: rgb(74, 187, 51);*/
+    padding: 0 50px;
+    border-right: solid;
+    border-width: 1px;
+}
+
+.aside h2 {
+    text-align: center;
+}
+
+.aside strong {
+    font-weight: normal;
+}
+
+.section {
+    grid-area: right;
+    /*background-color: rgb(250, 73, 73);*/
+
+}
+
+.section h2 {
+    text-align: center;
+}
+
+.footer {
+    grid-area: footer;
+    /*background-color: rgb(41, 39, 194);*/
+    text-align: right;
+    padding-right: 30px;
+}
+
+a:link {
+    text-decoration: none;
+    color: rgb(0, 153, 0);
+}
+
+a:visited {
+    color: rgb(0, 153, 0);
+}
+
+a:hover {
+    color: rgb(0, 153, 0);
+    background-color: rgb(231, 231, 231);
+}
+
+a:active {
+    color: rgb(0, 153, 0);
+}
+
+.button {
+    background-color: rgb(245, 245, 245);
+    font-weight: bold;
+    font-size: 25px;
+    padding: 7px;
+}
+
+#corpo {
+    display: grid;
+    grid-template-areas: "header header" "nav nav" "left right" "footer	footer";
+    grid-template-columns: 1fr 3fr;
+    grid-template-rows: auto;
+    background-color: rgb(255, 255, 255);
+}
+
+#corpoFull {
+    display: grid;
+    grid-template-areas: "header" "nav" "right" "footer";
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    background-color: rgb(255, 255, 255);
+}
+
+.article {
+
+    border-bottom: solid;
+    border-width: 1px;
+    
+}
+
+.herderElements {
+    display: inline-block;
+}
+
+@media (max-width: 1365px) {
+    /*Telemovel*/
+
+    body {
+        width:100%;
+        margin: 0px auto;
+    }
+
+    .section {
+        padding: 0 10px;
+    
+    }
+}
+
+@media (min-width: 1366px) {
+    /*PC*/
+
+    body {
+        width:90%;
+        margin: 10px auto;
+    }
+
+    #corpo {
+        padding: 0 50px;
+    }
+    
+    #corpoFull {
+        padding: 0 50px;
+    }
+
+    .section {
+        padding: 0 50px;
+    
+    }
+
+}
