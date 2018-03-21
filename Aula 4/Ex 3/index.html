@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>Formulário</title>
+    <link href="style.css" type="text/css" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="author" content="Paulo Coelho">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+</head>
+
+<body>
+
+    <form action="/action_page.php" method="get" target="_blank">
+
+        <fieldset>
+
+            <legend><h1>Morada Preferencial</h1></legend>
+
+            <div class="group">
+                <input type="radio" name="morada" value="casa" checked> Casa
+                <input type="radio" name="morada" value="profissional"> Profissional
+            </div>
+
+            <br/>
+
+            <div class= "group">
+                <h2>Titulo*</h2>
+                <select name="Titulo" size="1" required>
+                    <option value="titulo">Titulo</option>
+                    <option value="titulo2" selected>Titulo2</option>
+                    <option value="titulo3">Titulo3</option>
+                    <option value="titulo4">Titulo4</option>
+                </select>
+            </div>
+
+            <div class="sideBySide">
+                <div class="group">
+                    <h2>Nome*:</h2>
+                    <input class="sideBySide" type="text" name="nome" required>
+                </div>
+                <div class="group">
+                    <h2>Apelido*:</h2>
+                    <input type="text" name="apelido" required>
+                </div>
+            </div>
+
+            <div class="sideBySide">
+                <div class="group">
+                    <h2>Email*:</h2>
+                    <input id="mail" type="email" name="email" required>
+                </div>
+                <div class="group">
+                    <h2>Confirmar e-mail*:</h2>
+                    <input id="confmail" class="sideBySide" type="email" name="email" required>
+                </div>
+            </div>
+
+            <div class="sideBySide">
+                <div class="group">
+                    <h2>Código postal*:</h2>
+                    <input type="text" name="codigoPostal" pattern="[0-9][0-9][0-9][0-9]-[0-9][0-9][0-9]" required>
+                </div>
+                <div class="group">
+                    <h2>Cidade*:</h2>
+                    <input type="text" name="cidade" required>
+                </div>
+            </div>
+
+            <div class="group">
+            <h2>País*</h2>
+                <select name="Pais" size="1" required>
+                    <option value="portugal">Portugal</option>
+                    <option value="espanha" selected>Espanha</option>
+                    <option value="franca">Franca</option>
+                    <option value="holanda">Holanda</option>
+                </select>
+            </div>
+
+            <div class="sideBySide">
+                <div class="group">
+                    <h2>Nº de telefone:</h2>
+                    <input type="text" name="telefone">
+                </div>
+                <div class="group">
+                    <h2>TM:</h2>
+                    <input type="text" name="tm">
+                </div>
+            </div>
+
+        </fieldset>
+
+        <div id="line"></div>
+
+        <fieldset>
+
+            <legend><h1>Detalhes do condutor</h1></legend>
+
+            <div class="group">
+                <h2>Data de nascimento*</h2>
+                <input type="date" name="date" max="2000-12-31" min="1900-01-01" required>
+            </div>
+
+            <div class="sideBySide">
+                <div class="group">
+                    <h2>Nova password*:</h2>
+                    <input id="pass" type="password" name="psw" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}" required>
+                </div>
+                <div class="group">
+                    <h2>Confirmar nova password*:</h2>
+                    <input id="confpass" type="password" name="psw" required>
+                </div>
+            </div>
+
+            <div class="group">
+                <h2>Nº da carta de condução*:</h2>
+                <input type="text" name="nCartaConducao" required>
+            </div>
+
+            <br/>
+
+            <div class="group">
+                <input id="checkBox" type="checkbox" name="termos" value="termos"> Aceito os
+                <a href="termos.html" target="_blanck">Termos e Condições Gerais</a>
+            </div>
+
+        </fieldset>
+
+        <input id="submitButton" type="submit" value="Criar o meu perfil" disabled>
+
+    </form>
+
+
+
+    <script src="scripts.js"></script>
+</body>
+
+</html>

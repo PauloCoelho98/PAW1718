@@ -1,0 +1,36 @@
+body {
+    width: 70%;
+    margin: auto;
+}
+
+#line{
+    border-top: solid;
+    border-width: 2px;
+    border-color: gainsboro;
+}
+
+.sideBySide {
+    /*display: inline-block;*/
+}
+
+.group {
+    display: inline-block;
+    margin: 10px;
+}
+
+h2 {
+    font-size: 20px;
+    margin: 0px;
+}
+
+fieldset {
+    border: none;
+}
+
+h1, h2 {
+    color: rgb(207, 207, 207);
+}
+
+input[type="text"], input[type="email"], input[type="password"], input[type="date"] {
+    width: 200px;
+}
