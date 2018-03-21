@@ -1,0 +1,28 @@
+body {
+    display: grid;
+    grid-template-areas: "grande" "pequena";
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    background-color: rgb(255, 255, 255);
+}
+
+#imagemGrande{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    grid-area: grande;
+    /*order: solid;*/
+    height: 400px;
+}
+
+.imagensPequenasDiv{
+    /*display: inline-block;
+    position:relative;
+    left:50%;
+    margin-left:-50px;*/
+    grid-area: pequena;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    /*border: solid;*/
+}
