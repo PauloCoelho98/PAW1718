@@ -1,3 +1,5 @@
+"use strict"; 
+
 function selecionarImagem(imagem){
 
     switch (imagem){
