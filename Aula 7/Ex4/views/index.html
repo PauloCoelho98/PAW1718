@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <script src="/socket.io/socket.io.js"></script>
+    <title>Example</title>
+  </head>
+
+  <body>
+
+    <div id="i"></div>
+
+    <script>
+        var socket = io.connect('http://localhost:8000');
+
+        // emite uma mensagem ao servidor chamada 'hello-message' com o objeto myData
+        socket.emit('hello-message', {myData: 'hello from client'});
+        
+        // executa quando receber uma mensagem do servidor chamada 'server-answer'
+        socket.on('server-answer', function(data) {
+          console.log(data); // print "server is calling you"
+          let p = document.createElement('p');
+          document.getElementById("i").appendChild(p);
+          p.innerHTML = data.message;
+        })
+        
+    </script>
+  </body>
+</html>

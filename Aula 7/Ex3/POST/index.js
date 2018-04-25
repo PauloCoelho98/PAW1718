@@ -23,6 +23,23 @@ const urlencodedParser = bodyParser.urlencoded({ extended: false });
 com que o caminho absoluto seja adicionado antes do ficheiros descritos*/
 app.use(express.static(__dirname));
 
+
+app.use(function(req, res, next){
+    console.log('Time: ', Date.now());
+    next();
+})
+
+
+
+/**
+ * Middleware - route Logger
+ */
+function requestLogger(req, res, next) { 
+    console.log(`${req.method} ${req.originalUrl}`);
+    next();
+} 
+app.use(requestLogger);
+
 app.get('/', (req, res) => {
     res.sendFile('/index.html');
     
@@ -67,6 +84,14 @@ app.post('/showform', urlencodedParser, (req, res) => {
     }); 
 
 
+});
+/**
+ * The following code helps to redirect and respond 
+ * whenever a wrong route is entered on the site.
+ */
+app.use(function(req, res) {
+   // res.status(404).send({url: req.originalUrl + ' not found'});
+    res.sendFile(__dirname + '/404.html');
 });
 
 app.listen(8000, () => {
