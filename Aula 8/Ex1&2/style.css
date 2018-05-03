@@ -1,0 +1,21 @@
+body {
+    width: 70%;
+    margin: auto;
+}
+
+h2 {
+    font-size: 20px;
+    margin: 0px;
+}
+
+fieldset {
+    border: none;
+}
+
+h1, h2 {
+    color: rgb(207, 207, 207);
+}
+
+input[type="text"], input[type="email"], input[type="password"], input[type="date"] {
+    width: 200px;
+}

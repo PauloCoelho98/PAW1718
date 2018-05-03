@@ -19,7 +19,7 @@ app.get('/search', (req, res) => {
     let fs = require('fs');
 
     if (fs.existsSync(fileName)) {
-        res.sendfile(fileName);
+        res.sendFile(fileName);
     }else{
         res.sendFile(__dirname + '/404.html');
     }
