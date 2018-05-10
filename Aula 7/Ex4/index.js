@@ -15,7 +15,7 @@ function socketTest(){
         
     });
 }
-// 1 em 1 segundo: scheduleJob('*/2 * * * * *', function()
+// 2 em 2 segundos: scheduleJob('*/2 * * * * *', function()
 var j = schedule.scheduleJob('*/2 * * * * *', function(){
     socketTest();
 });

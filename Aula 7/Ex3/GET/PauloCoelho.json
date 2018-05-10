@@ -1,15 +1,15 @@
 {
   "morada": "casa",
   "titulo": "titulo2",
-  "nome": "Paulo",
+  "nome": "paulo",
   "apelido": "Coelho",
   "email": "paulo@hotmail.com",
   "codigoPostal": "1111-111",
   "cidade": "Porto",
   "pais": "espanha",
   "telefone": "",
-  "date": "1900-10-10",
-  "psw": "123456Aa",
+  "date": "1997-04-30",
+  "psw": "123456aA",
   "nCartaConducao": "1",
   "termos": "termos"
 }
