@@ -1,0 +1,20 @@
+doctype html
+html
+  head
+    title= title
+    link(href='style.css', type='text/css', rel='stylesheet')
+    meta(charset='UTF-8')
+    meta(name='author', content='Paulo Coelho')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+  body
+    form(action='/registo', method='post', target='_self')
+      fieldset
+        legend
+          h1 Registo
+        h2 Nome:
+        input.sideBySide(type='text', name='nome', required='')
+        h2 Senha:
+        input(type='password', name='senha', required='')
+      br
+      input#submitButton(type='submit', value='Criar o meu perfil')
+    script(src='scripts.js')

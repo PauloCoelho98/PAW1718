@@ -1,0 +1,13 @@
+html 
+    head 
+        link(href='style.css', type='text/css', rel='stylesheet')
+        meta(charset='UTF-8')
+        meta(name='author', content='Paulo Coelho')
+        meta(name='viewport', content='width=device-width, initial-scale=1.0')
+        title=title 
+    body 
+        each item in results
+            .division
+            p.inline #{item.nome} | 
+            p.inline | #{item.pass} |
+            p.inline | #{item.permissao}

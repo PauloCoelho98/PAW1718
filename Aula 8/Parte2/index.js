@@ -35,24 +35,25 @@ const sessionStore = new MySQLStore(options);
 app.use(session({
     secret: 'keyboard cat',
     resave: false,
-    saveUninitialized: true,
+    saveUninitialized: false,
     store: sessionStore
+    //cookie: {originalMaxAge: 10000}
+    
 }))
 
 
 app.get('/user', (req, res) => {
     //session = req.session;
     if(req.session.nome){
-        res.send(req.session.nome);
+        res.send('<h1>Name: </h1>' + req.session.nome + '<br/><a type="button" href="/logout">Logout</a>');
     }else{
-        res.send("log in to see");
+        res.send("log in to see <h1>oi</h1>");
     }
 });
 
 app.get('/logout', (req, res) => {
     if(req.session.nome){
         req.session.destroy();
-        //sessionStore.close();
     }
     
     res.redirect('/login');
@@ -169,15 +170,16 @@ app.post('/login', urlencodedParser, (req, res) => {
             if(err) throw err;
 
             if(result.length<1){
-                return res.send("Falhou");
+                return res.send("Falhou, nome não encontrado");
             }
 
             bcrypt.compare(person.senha, result[0].pass, function(err, response) {
                 if(response===true){
                     req.session.nome = person.nome;
-                    res.send("Sucesso");
+                    //req.session.cookie.maxAge = 10000; // Sessão de 10 segundos
+                    res.redirect('/user');
                 }else{
-                    res.send("Falhou");
+                    res.send("senha errada");
                 }
                 
             });
